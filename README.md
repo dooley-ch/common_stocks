@@ -4,5 +4,13 @@
 
 ## Introduction
 
-The purpose of this application is to allow users to perform fundamental analysis and valuations on publicly quatoes 
+The purpose of this application is to allow users to perform fundamental analysis and valuations on publicly quoted 
 companies that are included in the S&P 600, 400 and 500 indexes.
+
+## System Overview
+
+![System Overview](system_overview.jpg)
+
+## Documentation
+
+## Deployment
