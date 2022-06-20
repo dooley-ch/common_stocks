@@ -1,0 +1,1720 @@
+{
+	"tables": {
+		"eb0ade88-8a13-48d1-92e0-c8dc1f567e5a": {
+			"id": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+			"visible": true,
+			"name": "metadata",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "6c6eebe2-8509-485f-be0f-94f54eacd16c",
+					"name": "lock_version",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "151b40c1-adad-4205-af14-6e467833a552",
+					"name": "created_at",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "cec25cca-c7f8-4fee-a135-e40d7e8976c3",
+					"name": "updated_at",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3f8db51a-2572-40f9-9064-5ce19ec88f79",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"cf89890e-4599-4fa4-bb24-5f64c85db901": {
+			"id": "cf89890e-4599-4fa4-bb24-5f64c85db901",
+			"visible": true,
+			"name": "config_item",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c7c347d3-4653-4bab-97d0-cb8a7b000267",
+					"name": "key",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "34e58ffe-26a9-4cf6-ba53-e3108e322a0d",
+					"name": "value",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "dcbc76b4-b966-440c-a9e1-5f3b83992da6",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"c0d32f60-74bc-4e47-9cb9-6fbb6d23710a": {
+			"id": "c0d32f60-74bc-4e47-9cb9-6fbb6d23710a",
+			"visible": true,
+			"name": "config",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "943980ac-37cd-4e97-9542-dc7ab154b3e9",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "bd3f1838-538e-44d0-8325-ffe7c6da55b9",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "700811a6-4444-466d-a87b-8ab4e214e7cc",
+					"name": "items",
+					"datatype": "cf89890e-4599-4fa4-bb24-5f64c85db901",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "ea8df3b7-eeee-4d6e-ad17-0ba8f0a167a0",
+					"name": "metadata",
+					"datatype": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "aebfb3b2-26dd-487c-8b09-c97759548e0c",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "a7c25fd4-85a1-4eb9-99aa-24dc789e9f50",
+							"colid": "943980ac-37cd-4e97-9542-dc7ab154b3e9"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "bf60038e-528c-419f-b464-e80f13b53378",
+					"name": "config_ix_unique_name",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"config_ix_unique_name\",\nunique: true\n}",
+						"fields": "{\n\"name\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "6e98d114-7815-4bf6-b98a-230fdda01596",
+					"name": "config_ix_search_by_name",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"config_ix_search_by_name\"\n}",
+						"fields": "{\n\"name\": 1,\n\"items\": 1,\n\"metadata\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"8a6a9220-8c22-43c6-b384-132af3ee7a04": {
+			"id": "8a6a9220-8c22-43c6-b384-132af3ee7a04",
+			"visible": true,
+			"name": "gics_sub_industry",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "7bd52e53-ffe0-4845-8ab6-340b5c70811a",
+					"name": "id",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "1878dc22-5937-4c3f-9fa1-1a74460a1bba",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "528e558d-023f-4ee5-9497-aed8dd12531c",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"87e24024-d3a4-44d2-83e5-49404a1381e3": {
+			"id": "87e24024-d3a4-44d2-83e5-49404a1381e3",
+			"visible": true,
+			"name": "gics_industry",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "bf2ceb4f-6e60-4a07-99f7-3f8659e70088",
+					"name": "id",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "249cd5ad-1d56-4bc7-8a7e-e90a90bc1c44",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "ea8069ae-f82f-4d26-90c4-38241d1157e7",
+					"name": "sub_industry",
+					"datatype": "8a6a9220-8c22-43c6-b384-132af3ee7a04",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "de007bad-7670-4432-a489-e8bde7ca0bea",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"48d37a4a-3ab1-492a-a1cb-0d60e7659a8f": {
+			"id": "48d37a4a-3ab1-492a-a1cb-0d60e7659a8f",
+			"visible": true,
+			"name": "gics_industry_group",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "7fbb0793-ec2e-4658-b241-07dcb09152e7",
+					"name": "id",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "a43b0f48-4e52-406a-b1f5-346b689ea719",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "52c3990e-e128-4e46-a900-9cd2b9b32bb6",
+					"name": "industry",
+					"datatype": "87e24024-d3a4-44d2-83e5-49404a1381e3",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "688e1d68-877d-4ab0-8172-befee8ea6301",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"b0fd7963-69c2-499d-9e1f-12f4e488233c": {
+			"id": "b0fd7963-69c2-499d-9e1f-12f4e488233c",
+			"visible": true,
+			"name": "gics_sector",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "92a12693-3bed-488f-9874-6f60fefd5f20",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "474d19a4-151d-453a-becb-62ed81388c0b",
+					"name": "id",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "b83a8b96-5aec-4efe-be99-e717a239a272",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "02c1d1af-eee2-47c4-a492-2ac0e14a5b15",
+					"name": "industry_group",
+					"datatype": "48d37a4a-3ab1-492a-a1cb-0d60e7659a8f",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "188c8a35-7f3e-4bf6-b19d-bd5c37b8121a",
+					"name": "metadata",
+					"datatype": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "77716ca9-dcbb-4fcf-880c-1bdc632fe60f",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "93be5003-fcd4-47db-81e9-ae207fb1dbf2",
+							"colid": "92a12693-3bed-488f-9874-6f60fefd5f20"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "cb6c1fc5-8b21-4fa6-9b8f-edd861fdee16",
+					"name": "gics_sector_ix_unique_id",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"GICSSector_ix_unique_id\",\nunique: true\n}",
+						"fields": "{\n\"id\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "a730ccf0-1725-4ffa-a1b7-0258a23c7c82",
+					"name": "gics_sector_ix_unique_name",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"GICSSector_ix_unique_name\",\nunique: true\n}",
+						"fields": "{\n\"name\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "844827dc-a314-43f3-a8ca-9e78bd65b70a",
+					"name": "gics_sector_ix_search_by_id",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"GICSSector_ix_search_by_id\"\n}",
+						"fields": "{\n\"id\": 1,\n\"name\": 1,\n\"industry_group\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "354446b5-dd09-4c9a-b802-ac5131d2b57c",
+					"name": "gics_sector_ix_search_by_name",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"GICSSector_ix_search_by_name\"\n}",
+						"fields": "{\n\"name\": 1,\n\"id\": 1,\n\"industry_group\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"045e8b48-db83-4b37-9024-c099f5eb667b": {
+			"id": "045e8b48-db83-4b37-9024-c099f5eb667b",
+			"visible": true,
+			"name": "master",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c3fb20c7-3778-49e3-8f9b-0bfdf115c563",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "0b00d2f3-6ad2-4562-9719-75e3da605bbf",
+					"name": "ticker",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "01cead13-7274-4cf4-b0f6-06f1e2dc1e66",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "df9aa86a-7acc-4faa-8d01-d11e64fe621a",
+					"name": "cik",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "81b52f6c-c1c3-4e75-88f3-725a0788f820",
+					"name": "figi",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "80ec9080-53c4-49a2-ae1d-b6e6f2b17a9d",
+					"name": "sub_industry",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "ba52863b-fa36-48a3-a358-e38ad2f15791",
+					"name": "metadata",
+					"datatype": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "c66975ad-4d88-404d-9b81-6b1851778115",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "09ef8061-01d8-4b50-8dbf-cd630b91c801",
+							"colid": "c3fb20c7-3778-49e3-8f9b-0bfdf115c563"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "d043e8b9-ce11-4b77-bdca-66897cd0f1ed",
+					"name": "master_ix_unique_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"master_ix_1\",\nunique: true\n}",
+						"fields": "{\n\"ticker\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "9bd04a5c-71d9-4615-bb2a-19b0931c5870",
+					"name": "master_ix_search_by_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"master_ix_search_by_ticker\"\n}",
+						"fields": "{\n\"ticker\": 1,\n\"name\": 1,\n\"cik\": 1,\n\"figi\": 1,\n\"sub_industry\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "79bee004-29dd-4326-9477-1da07389bf59",
+					"name": "master_ix_search_by_name",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"master_ix_search_by_name\"\n}",
+						"fields": "{\n\"name\": 1,\n\"ticker\": 1,\n\"cik\": 1,\n\"figi\": 1,\n\"sub_industry\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"c0e16f02-ecaa-4c6c-8109-9bde5bd3b48e": {
+			"id": "c0e16f02-ecaa-4c6c-8109-9bde5bd3b48e",
+			"visible": true,
+			"name": "accounts_entry",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "00ab832b-fc08-48a4-a88e-2bfd4c398ae6",
+					"name": "tag",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "74c2c5e6-177f-4c98-a0c6-02cba9b0df3f",
+					"name": "value_1",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "92df2c50-205f-4f78-80df-70219e48ed7a",
+					"name": "value_2",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "13cdd063-8f44-4453-9ee5-3514e4cf6c3d",
+					"name": "value_3",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "13b5431a-adc2-4c9b-aca9-460d29194149",
+					"name": "value_4",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "80385310-8554-4361-9d38-9a1bc3ffd208",
+					"name": "value_5",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "5533da53-5b27-4e2b-a29d-56a3214ebc84",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"c0a9ab41-341e-493d-ab8b-d556b11a9b9b": {
+			"id": "c0a9ab41-341e-493d-ab8b-d556b11a9b9b",
+			"visible": true,
+			"name": "company",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c3fb20c7-3778-49e3-8f9b-0bfdf115c563",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "0b00d2f3-6ad2-4562-9719-75e3da605bbf",
+					"name": "ticker",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "01cead13-7274-4cf4-b0f6-06f1e2dc1e66",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "8463ec27-7232-4422-984e-57f919f90911",
+					"name": "description",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "df9aa86a-7acc-4faa-8d01-d11e64fe621a",
+					"name": "cik",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "81b52f6c-c1c3-4e75-88f3-725a0788f820",
+					"name": "figi",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "52b6f384-61e0-44fe-a107-964e37e6e593",
+					"name": "exchange",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "218302e6-bc47-4815-bc65-9219b612734c",
+					"name": "currency",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "7b519e5e-a33a-45e4-ad02-956da653fe42",
+					"name": "country",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "80ec9080-53c4-49a2-ae1d-b6e6f2b17a9d",
+					"name": "sub_industry",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "ba52863b-fa36-48a3-a358-e38ad2f15791",
+					"name": "metadata",
+					"datatype": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "17f73b20-2ecc-4341-b8fb-1b651b42b0db",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "09ef8061-01d8-4b50-8dbf-cd630b91c801",
+							"colid": "c3fb20c7-3778-49e3-8f9b-0bfdf115c563"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "29825a55-97d7-4666-be07-de358dc4f2aa",
+					"name": "company_ix_unique_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"company_ix_unique_ticker\",\nunique: true\n}",
+						"fields": "{\n\"ticker\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "e6baa655-4dcd-4acf-b134-52019aabf85a",
+					"name": "company_ix_search_by_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"company_ix_search_by_ticker\"\n}",
+						"fields": "{\n\"ticker\": 1,\n\"name\": 1,\n\"description\": 1,\n\"cik\": 1,\n\"figi\": 1,\n\"sub_industry\": 1,\n\"exchange\": 1,\n\"currency\": 1,\n\"country\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "cbc009ab-78d6-42f1-ad8b-368a4b447e6f",
+					"name": "company_ix_search_by_name",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"company_ix_search_by_name\"\n}",
+						"fields": "{\n\"name\": 1,\n\"ticker\": 1,\n\"description\": 1,\n\"cik\": 1,\n\"figi\": 1,\n\"exchange\": 1,\n\"currency\": 1,\n\"country\": 1,\n\"sub_industry\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"46d1492b-23db-4b8d-b33a-ba65e18b91b3": {
+			"id": "46d1492b-23db-4b8d-b33a-ba65e18b91b3",
+			"visible": true,
+			"name": "statement",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "b5e4483f-351b-4597-99d6-2ac0224c473b",
+					"name": "ticker",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "b256ac1b-64fd-40a8-a077-9bece7678e02",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "5ba00b85-3c02-42a4-847b-63a918a1282a",
+					"name": "items",
+					"datatype": "c0e16f02-ecaa-4c6c-8109-9bde5bd3b48e",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b2249c50-f3a1-41c8-8982-7976a9975c20",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"115962bf-5d02-49bc-aec1-e2c46136e486": {
+			"id": "115962bf-5d02-49bc-aec1-e2c46136e486",
+			"visible": true,
+			"name": "financial_statements",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "2497c20f-20e2-4c83-b666-fc455b1fe46e",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "e5c9f49a-c76d-4e2a-8253-84c7490e5a6d",
+					"name": "ticker",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "38ed46e5-76b4-46df-8c8a-210221239a8a",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "8ae04dd1-fff1-4706-91e7-33b8a61c0776",
+					"name": "income_statement",
+					"datatype": "46d1492b-23db-4b8d-b33a-ba65e18b91b3",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "3e0924b8-c63c-4f73-843b-b3dea769f2c6",
+					"name": "cash_flow_statement",
+					"datatype": "46d1492b-23db-4b8d-b33a-ba65e18b91b3",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "6bfeb9d1-62b2-46c1-afc3-523f580a47d3",
+					"name": "balance_sheet_statement",
+					"datatype": "46d1492b-23db-4b8d-b33a-ba65e18b91b3",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "8fbfc822-7f6e-4fd0-af78-82ccae7d685b",
+					"name": "earnings_statement",
+					"datatype": "46d1492b-23db-4b8d-b33a-ba65e18b91b3",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "9520185c-9547-4847-9aec-5d457660de33",
+					"name": "metadata",
+					"datatype": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "37191187-7032-4766-8446-0d99b2374594",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "f5329ea8-ee01-4bef-a257-c370cdefe3a7",
+							"colid": "2497c20f-20e2-4c83-b666-fc455b1fe46e"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "01bfc054-89fb-49eb-89a8-7df6465b0d15",
+					"name": "financial_statements_ix_unique_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"financial_statements_ix_unique_ticker\",\nunique: true\n}",
+						"fields": "{\n\"ticker\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "ee8a7218-faba-4677-9b7c-2817f86e44fd",
+					"name": "financial_statements_ix_search_by_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"financial_statements_ix_search_by_ticker\"\n}",
+						"fields": "{\n\"ticker\": 1,\n\"name\": 1,\n\"income_statement\": 1,\n\"cash_flow_statement\": 1,\n\"balance_sheet_statement\": 1,\n\"earnings_statement\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"1139efa3-21f1-4751-861b-6c9c01be109c": {
+			"id": "1139efa3-21f1-4751-861b-6c9c01be109c",
+			"visible": true,
+			"name": "Log",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "7d593902-af70-4b81-bbcf-02b1a62420ee",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "e3014752-d2ec-4df6-96d3-efadfd2308bb",
+					"name": "logged_at",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "1be73311-e10d-4e78-8ea9-5aea720e16c1",
+					"name": "level",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "13a0b7d6-152a-4c7b-b3b9-46d7bf25a79e",
+					"name": "function",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "c463176d-209d-4742-a92e-717ce6a87032",
+					"name": "file",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "d7d77d3e-3ae7-41fc-bb07-d40c00280f8e",
+					"name": "line",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "4beadc6d-cf17-4528-9b77-850bf712d55e",
+					"name": "message",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "ebd519ea-4ec1-4938-a764-a512cce50bee",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "994783ed-d048-42d4-9306-04feab708f75",
+							"colid": "7d593902-af70-4b81-bbcf-02b1a62420ee"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "f830eb84-ad1f-4259-87e6-74f6f7a5eb23",
+					"name": "Log_ix_search_by_date",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"Log_ix_search_by_date\"\n}",
+						"fields": "{\n\"logged_at\": -1,\n\"level\": 1,\n\"function\": 1,\n\"file\": 1,\n\"line\": 1,\n\"message\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "5ce26a45-73b2-4c18-918e-78bd49b842c0",
+					"name": "Log_ix_search_by_level",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"Log_ix_search_by_level\"\n}",
+						"fields": "{\n\"level\": 1,\n\"logged_at\": 1,\n\"function\": 1,\n\"file\": 1,\n\"line\": 1,\n\"message\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		}
+	},
+	"relations": {},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "Common Stocks",
+		"id": "4fbf41ae-89df-4c40-9028-4f1ebf38e89f",
+		"activeDiagram": "fa20a288-6e04-4afa-94ac-b3eee49b704a",
+		"desc": "",
+		"path": "",
+		"type": "MONGODB",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 4,
+			"minor": 6,
+			"extra": 0
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"stickyParentIsDisplayed": false,
+		"def_coltopk": true,
+		"def_validationLevel": "na",
+		"def_validationAction": "na",
+		"def_collation": "",
+		"def_others": "",
+		"lastSaved": "Mon Jun 20 2022 10:52:47 GMT+0200 (Central European Summer Time)",
+		"writeFileParam": false
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"fa20a288-6e04-4afa-94ac-b3eee49b704a": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "fa20a288-6e04-4afa-94ac-b3eee49b704a",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"eb0ade88-8a13-48d1-92e0-c8dc1f567e5a": {
+					"referencedItemId": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"x": 45,
+					"y": 42,
+					"gHeight": 81,
+					"gWidth": 191,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"cf89890e-4599-4fa4-bb24-5f64c85db901": {
+					"referencedItemId": "cf89890e-4599-4fa4-bb24-5f64c85db901",
+					"x": 48,
+					"y": 153,
+					"gHeight": 63,
+					"gWidth": 164,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c0d32f60-74bc-4e47-9cb9-6fbb6d23710a": {
+					"referencedItemId": "c0d32f60-74bc-4e47-9cb9-6fbb6d23710a",
+					"x": 529,
+					"y": 50,
+					"gHeight": 189,
+					"gWidth": 219,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"8a6a9220-8c22-43c6-b384-132af3ee7a04": {
+					"referencedItemId": "8a6a9220-8c22-43c6-b384-132af3ee7a04",
+					"x": 51,
+					"y": 245,
+					"gHeight": 63,
+					"gWidth": 166,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"87e24024-d3a4-44d2-83e5-49404a1381e3": {
+					"referencedItemId": "87e24024-d3a4-44d2-83e5-49404a1381e3",
+					"x": 56,
+					"y": 346,
+					"gHeight": 117,
+					"gWidth": 283,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"48d37a4a-3ab1-492a-a1cb-0d60e7659a8f": {
+					"referencedItemId": "48d37a4a-3ab1-492a-a1cb-0d60e7659a8f",
+					"x": 59,
+					"y": 497,
+					"gHeight": 171,
+					"gWidth": 305,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"b0fd7963-69c2-499d-9e1f-12f4e488233c": {
+					"referencedItemId": "b0fd7963-69c2-499d-9e1f-12f4e488233c",
+					"x": 532,
+					"y": 299,
+					"gHeight": 315,
+					"gWidth": 327,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"045e8b48-db83-4b37-9024-c099f5eb667b": {
+					"referencedItemId": "045e8b48-db83-4b37-9024-c099f5eb667b",
+					"x": 925,
+					"y": 49,
+					"gHeight": 207,
+					"gWidth": 219,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c0e16f02-ecaa-4c6c-8109-9bde5bd3b48e": {
+					"referencedItemId": "c0e16f02-ecaa-4c6c-8109-9bde5bd3b48e",
+					"x": 68,
+					"y": 713,
+					"gHeight": 135,
+					"gWidth": 176,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c0a9ab41-341e-493d-ab8b-d556b11a9b9b": {
+					"referencedItemId": "c0a9ab41-341e-493d-ab8b-d556b11a9b9b",
+					"x": 928,
+					"y": 297,
+					"gHeight": 279,
+					"gWidth": 219,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"46d1492b-23db-4b8d-b33a-ba65e18b91b3": {
+					"referencedItemId": "46d1492b-23db-4b8d-b33a-ba65e18b91b3",
+					"x": 67,
+					"y": 881,
+					"gHeight": 189,
+					"gWidth": 230,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"115962bf-5d02-49bc-aec1-e2c46136e486": {
+					"referencedItemId": "115962bf-5d02-49bc-aec1-e2c46136e486",
+					"x": 1227,
+					"y": 54,
+					"gHeight": 873,
+					"gWidth": 310,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"1139efa3-21f1-4751-861b-6c9c01be109c": {
+					"referencedItemId": "1139efa3-21f1-4751-861b-6c9c01be109c",
+					"x": 540,
+					"y": 647,
+					"gHeight": 153,
+					"gWidth": 183,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": []
+}

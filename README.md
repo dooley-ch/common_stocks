@@ -15,6 +15,16 @@ companies that are included in the S&P 600, 400 and 500 indexes.  The applicatio
 - A web front in for user interaction
 - A RESTful service for data access
 
+## Constraints
+
+This application uses financial data from the [Aphavantage website](https://www.alphavantage.co/).  The freely available
+key provided by this site comes with a number of restrictions:
+- Limited to 5 API calls per minute
+- A maximum of 500 API calls per day
+
+To work within these limitations the application caches downoaded for a given time period and uses a message que to aid
+responsiveness in downloading the company data.
+
 ## System Overview
 
 ![System Overview](system_overview.jpg)
@@ -51,8 +61,8 @@ The application has five main components, four applications and library of commo
 **csWebApp:** This service uses the Flask framework to deliver the application's UI, so that the public can make use
 of the application's features.
 
-**csLoader:** This application is responsible for building the list of S&P index components and loading seed data into the
-database.
+**csLoader:** This application is responsible for building the list of S&P index components and loading seed data into 
+the database.
 
 **csQueue:** The processor handles the messages posted to the message queue.
 
