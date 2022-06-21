@@ -82,7 +82,7 @@ function create_master(db) {
 	    $jsonSchema: {
 	      bsonType: 'object',
 	      title: 'master',
-	      required: ['ticker', 'name', 'cik', 'figi', 'sub_industry', 'metadata'],
+	      required: ['ticker', 'name', 'cik', 'figi', 'sub_industry', 'indexes', 'metadata'],
 	      properties: {
 	        ticker: {
 	          bsonType: 'string'
@@ -98,6 +98,12 @@ function create_master(db) {
 	        },
 	        sub_industry: {
 	          bsonType: 'string'
+	        },
+	        indexes: {
+	          bsonType: 'array',
+	          items: {
+	            bsonType: 'string'
+	          }
 	        },
 	        metadata: {
 	          bsonType: 'object',
@@ -267,7 +273,7 @@ function create_company(db) {
 	    $jsonSchema: {
 	      bsonType: 'object',
 	      title: 'company',
-	      required: ['ticker', 'name', 'description', 'cik', 'figi', 'exchange', 'currency', 'country', 'sub_industry', 'metadata'],
+	      required: ['ticker', 'name', 'description', 'cik', 'figi', 'exchange', 'currency', 'country', 'sub_industry', 'indexes', 'metadata'],
 	      properties: {
 	        ticker: {
 	          bsonType: 'string'
@@ -295,6 +301,12 @@ function create_company(db) {
 	        },
 	        sub_industry: {
 	          bsonType: 'string'
+	        },
+	        indexes: {
+	          bsonType: 'array',
+	          items: {
+	            bsonType: 'string'
+	          }
 	        },
 	        metadata: {
 	          bsonType: 'object',
