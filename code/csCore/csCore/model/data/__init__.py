@@ -16,9 +16,11 @@ __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
 __all__ = ['ConfigItem', 'Config', 'ConfigList', 'ConfigExt', 'ConfigExtList', 'IndexName', 'Master', 'MasterList',
-           'MasterExt', 'MasterExtList', 'Company', 'CompanyList', 'CompanyExt', 'CompanyExtList']
+           'MasterExt', 'MasterExtList', 'Company', 'CompanyList', 'CompanyExt', 'CompanyExtList', 'AccountsEntry',
+           'Statement', 'FinancialStatements', 'FinancialStatementsExt']
 
 from ._config import *
 from ._master import *
 from ._company import *
+from ._financial_statements import *
 from ._core import IndexName

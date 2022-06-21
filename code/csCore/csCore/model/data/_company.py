@@ -38,7 +38,23 @@ class Company:
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> Company:
-        pass
+        ticker = data['']
+        name = data['']
+        description = data['']
+        cik = data['']
+        figi = data['']
+        exchange = data['']
+        currency = data['']
+        country = data['']
+        sub_industry = data['']
+        indexes = data['']
+
+        record = Company(ticker, name, description, cik, figi, exchange, currency, country, sub_industry)
+
+        for index in indexes:
+            record.indexes.append(IndexName(index))
+
+        return record
 
 
 CompanyList = NewType('MasterExtList', list[Company])
@@ -50,7 +66,25 @@ class CompanyExt(Company):
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> CompanyExt:
-        pass
+        ticker = data['']
+        name = data['']
+        description = data['']
+        cik = data['']
+        figi = data['']
+        exchange = data['']
+        currency = data['']
+        country = data['']
+        sub_industry = data['']
+        indexes = data['']
+        metadata = data['metadata']
+
+        record = Company(ticker, name, description, cik, figi, exchange, currency, country, sub_industry,
+                         Metadata(**metadata))
+
+        for index in indexes:
+            record.indexes.append(IndexName(index))
+
+        return record
 
 
 CompanyExtList = NewType('MasterExtList', list[Company])
