@@ -57,6 +57,9 @@ class Config:
         return record
 
 
+ConfigList = NewType('ConfigList', list[Config])
+
+
 @attrs.frozen
 class ConfigExt(Config):
     """
@@ -78,5 +81,4 @@ class ConfigExt(Config):
         return record
 
 
-ConfigList = NewType('ConfigList', list[Config])
 ConfigExtList = NewType('ConfigExtList', list[ConfigExt])

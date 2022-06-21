@@ -1,5 +1,5 @@
 # *******************************************************************************************
-#  File:  model_config_test.py
+#  File:  config_test.py
 #
 #  Created: 20-06-2022
 #
@@ -17,7 +17,6 @@ __maintainer__ = "James Dooley"
 __status__ = "Production"
 
 import orjson
-
 import csCore.model.data as db_model
 
 _config_data_1 = """
@@ -48,7 +47,6 @@ class TestConfig:
     """
     This class tests the Config DTO class
     """
-
     def test_create(self) -> None:
         cfg = db_model.Config('database')
         assert cfg.name == 'database'
