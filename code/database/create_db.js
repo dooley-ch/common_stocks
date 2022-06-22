@@ -1093,6 +1093,104 @@ function create_csloader_activity_log(db) {
 	});
 }
 
+function create_earnings(db) {
+	// This function creates the earnings collection
+
+	db.createCollection('earnings', {
+	  validator: {
+	    $jsonSchema: {
+	      bsonType: 'object',
+	      title: 'earnings',
+	      required: ['ticker', 'name', 'annual', 'quarter', 'metadata'],
+	      properties: {
+	        ticker: {
+	          bsonType: 'string'
+	        },
+	        name: {
+	          bsonType: 'string'
+	        },
+	        annual: {
+	          bsonType: 'array',
+	          items: {
+	            title: 'annual_earnings',
+	            required: ['year_end', 'earnings'],
+	            properties: {
+	              year_end: {
+	                bsonType: 'date'
+	              },
+	              earnings: {
+	                bsonType: 'string'
+	              }
+	            }
+	          }
+	        },
+	        quarter: {
+	          bsonType: 'array',
+	          items: {
+	            title: 'quarter_earnings',
+	            required: ['quarter_end', 'reported', 'earnings', 'estimate', 'surprise', 'surprise_percent'],
+	            properties: {
+	              quarter_end: {
+	                bsonType: 'date'
+	              },
+	              reported: {
+	                bsonType: 'date'
+	              },
+	              earnings: {
+	                bsonType: 'string'
+	              },
+	              estimate: {
+	                bsonType: 'string'
+	              },
+	              surprise: {
+	                bsonType: 'string'
+	              },
+	              surprise_percent: {
+	                bsonType: 'string'
+	              }
+	            }
+	          }
+	        },
+	        metadata: {
+	          bsonType: 'array',
+	          items: {
+	            title: 'metadata',
+	            required: ['lock_version', 'created_at', 'updated_at'],
+	            properties: {
+	              lock_version: {
+	                bsonType: 'int'
+	              },
+	              created_at: {
+	                bsonType: 'date'
+	              },
+	              updated_at: {
+	                bsonType: 'date'
+	              }
+	            }
+	          }
+	        }
+	      }
+	    }
+	  }
+	});
+	db.earnings.createIndex({
+	  "ticker": 1
+	}, {
+	  name: "earnings_ix_ticker",
+	  unique: true
+	})
+
+	db.earnings.createIndex({
+	  "ticker": 1,
+	  "name": 1,
+	  "annual": 1,
+	  "quarter": 1,
+	  "metadata": 1
+	}, {
+	  name: "earnings_ix_search"
+	});
+}
+
 function drop_database(name) {	
 	// This function drops the named database
 	
@@ -1126,4 +1224,6 @@ function create_database(name) {
 	
 	create_csloader_log(db);
 	create_csloader_activity_log(db);
+	
+	create_earnings(db);
 }

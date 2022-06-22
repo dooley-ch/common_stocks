@@ -1570,6 +1570,320 @@
 			"validationAction": "na",
 			"collation": "",
 			"others": ""
+		},
+		"2d82f42b-8dcd-4084-8f79-aacc85445957": {
+			"id": "2d82f42b-8dcd-4084-8f79-aacc85445957",
+			"visible": true,
+			"name": "annual_earnings",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "935efc61-aa89-4646-b1fe-d7475cdc78ab",
+					"name": "year_end",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "0a665f6a-7468-4a11-ba80-af8aed03a70e",
+					"name": "earnings",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "4f5a7bdd-24c2-43b2-9cfd-2c3062781c02",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"bdd35fd4-222d-4720-978d-5d189cb4e443": {
+			"id": "bdd35fd4-222d-4720-978d-5d189cb4e443",
+			"visible": true,
+			"name": "quarter_earnings",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "8ce93557-5a1a-4a2e-837d-bb5f7cd81554",
+					"name": "quarter_end",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "d5802530-b450-4c13-8929-e1f41bf69a0e",
+					"name": "reported",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "017bc85c-4ea5-4397-a797-5a0f2e120f46",
+					"name": "earnings",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "4705a04c-1ceb-43a7-a0a5-47b57830509b",
+					"name": "estimate",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "1111beff-322f-44c0-97d8-73a919f4ac9e",
+					"name": "surprise",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "58b0e5c9-b11c-4b86-9779-6b01868aa2ac",
+					"name": "surprise_percent",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "4908584a-963c-4422-82ea-032e589054b4",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"8f28f853-b88e-437f-ba64-0eefb255be61": {
+			"id": "8f28f853-b88e-437f-ba64-0eefb255be61",
+			"visible": true,
+			"name": "earnings",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "b5874435-ccb8-4677-8ecc-883ac95507e0",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "a889cf88-8f61-4d6c-85ca-be73d187c0f0",
+					"name": "ticker",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "b5d78840-211b-404e-9b22-08b56d2d95bd",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "176256d7-024f-47b1-b220-8e49be50a922",
+					"name": "annual",
+					"datatype": "2d82f42b-8dcd-4084-8f79-aacc85445957",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "2a848746-7604-46c8-96fa-9cc5c0719245",
+					"name": "quarter",
+					"datatype": "bdd35fd4-222d-4720-978d-5d189cb4e443",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "b44a9b3a-3391-4dba-8370-935f9909e3a5",
+					"name": "metadata",
+					"datatype": "eb0ade88-8a13-48d1-92e0-c8dc1f567e5a",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "170559c3-95e5-4f7a-82f2-816716789a05",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "ea933a72-6d44-49b6-90e7-f0685471c1d1",
+							"colid": "b5874435-ccb8-4677-8ecc-883ac95507e0"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "83e1524c-864c-46b0-ae63-0f32435e3553",
+					"name": "earnings_ix_ticker",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"earnings_ix_ticker\",\nunique: true\n}",
+						"fields": "{\n\"ticker\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "faa0d934-2752-49d8-b1c5-f6801dd6ffc9",
+					"name": "earnings_ix_search",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"mongodb": {
+						"options": "{\nname: \"earnings_ix_search\"\n}",
+						"fields": "{\n\"ticker\": 1,\n\"name\": 1,\n\"annual\": 1,\n\"quarter\": 1,\n\"metadata\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
 		}
 	},
 	"relations": {},
@@ -1604,7 +1918,7 @@
 		"def_validationAction": "na",
 		"def_collation": "",
 		"def_others": "",
-		"lastSaved": "Tue Jun 21 2022 20:58:18 GMT+0200 (Central European Summer Time)",
+		"lastSaved": "Wed Jun 22 2022 21:09:24 GMT+0200 (Central European Summer Time)",
 		"writeFileParam": false
 	},
 	"otherObjects": {},
@@ -1694,7 +2008,7 @@
 					"gHeight": 315,
 					"gWidth": 327,
 					"color": "#ffffff",
-					"background": "#03a9f4",
+					"background": "#9c27b0",
 					"resized": false,
 					"autoExpand": true
 				},
@@ -1760,7 +2074,40 @@
 					"gHeight": 153,
 					"gWidth": 183,
 					"color": "#ffffff",
-					"background": "#03a9f4",
+					"background": "#9c27b0",
+					"resized": false,
+					"autoExpand": true
+				},
+				"2d82f42b-8dcd-4084-8f79-aacc85445957": {
+					"referencedItemId": "2d82f42b-8dcd-4084-8f79-aacc85445957",
+					"x": 321,
+					"y": 714,
+					"gHeight": 63,
+					"gWidth": 182,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"bdd35fd4-222d-4720-978d-5d189cb4e443": {
+					"referencedItemId": "bdd35fd4-222d-4720-978d-5d189cb4e443",
+					"x": 381,
+					"y": 853,
+					"gHeight": 135,
+					"gWidth": 228,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"8f28f853-b88e-437f-ba64-0eefb255be61": {
+					"referencedItemId": "8f28f853-b88e-437f-ba64-0eefb255be61",
+					"x": 773,
+					"y": 656,
+					"gHeight": 333,
+					"gWidth": 252,
+					"color": "#ffffff",
+					"background": "#9c27b0",
 					"resized": false,
 					"autoExpand": true
 				}

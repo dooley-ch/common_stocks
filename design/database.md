@@ -175,7 +175,7 @@ classDiagram
         <<Document>>
         +int lock_version
         +date created_at
-        +data updated_at
+        +date updated_at
     }
     
     class Company {
@@ -222,7 +222,7 @@ classDiagram
         <<Document>>
         +int lock_version
         +date created_at
-        +data updated_at
+        +date updated_at
     }
     
     class AccountsEntry {
@@ -251,6 +251,55 @@ classDiagram
         +Statement balance_sheet
         +Statement earnings
         +Metadata metadata    
+    }
+```
+
+### Earnings
+
+The Alphavantage site provides a lot of information about company earnings:
+
+- Annual Earnings
+- Quarterly Earnings
+- Quarterly Earnings estimates, expected reporting dates etc.
+
+This data is provided in a file and is downloaded once per by the application.
+
+```mermaid
+classDiagram
+    Earnings --* Metadata
+    Earnings --* AnnualEarnings
+    Earnings --* QuarterEarnings
+        
+    class Metadata {
+        <<Document>>
+        +int lock_version
+        +date created_at
+        +date updated_at
+    }
+    
+    class AnnualEarnings {
+        <<Document>>
+        +date year_end
+        +str earnings
+    }
+    
+    class QuarterEarnings {
+        <<Document>>
+        +date quarter_end
+        +date reported
+        +str earnings
+        +str estimated
+        +str surprise
+        +str surprise_percent
+    }
+    
+    class Earnings {
+        <<Container>>
+        +string ticker
+        +string name
+        +list[AnnualEarnings] annual
+        +list[QuarterEarnings] quarter  
+        +Metadata metadata     
     }
 ```
 
