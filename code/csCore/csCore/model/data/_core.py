@@ -15,7 +15,7 @@ __license__ = "MIT"
 __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
-__all__ = ['Metadata', 'IndexName']
+__all__ = ['Metadata', 'parse_record_date', 'IndexName']
 
 from enum import Enum
 from datetime import datetime
@@ -30,7 +30,7 @@ class IndexName(str, Enum):
     SP500 = 'sp500'
 
 
-def _parse_metadata_date(value) -> datetime:
+def parse_record_date(value) -> datetime:
     """
     This function converts a datetime string to an instance of the datetime class
     """
@@ -41,5 +41,5 @@ def _parse_metadata_date(value) -> datetime:
 @attrs.define
 class Metadata:
     lock_version: int = attrs.field(default=0, converter=int)
-    created_at: datetime = attrs.field(factory=datetime.now, converter=_parse_metadata_date)
-    updated_at: datetime = attrs.field(factory=datetime.now, converter=_parse_metadata_date)
+    created_at: datetime = attrs.field(factory=datetime.now, converter=parse_record_date)
+    updated_at: datetime = attrs.field(factory=datetime.now, converter=parse_record_date)

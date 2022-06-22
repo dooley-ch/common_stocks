@@ -17,10 +17,17 @@ __maintainer__ = "James Dooley"
 __status__ = "Production"
 __all__ = ['ConfigItem', 'Config', 'ConfigList', 'ConfigExt', 'ConfigExtList', 'IndexName', 'Master', 'MasterList',
            'MasterExt', 'MasterExtList', 'Company', 'CompanyList', 'CompanyExt', 'CompanyExtList', 'AccountsEntry',
-           'Statement', 'FinancialStatements', 'FinancialStatementsExt']
+           'FinancialStatements', 'FinancialStatementsExt', 'SubIndustry', 'SubIndustryList', 'Industry',
+           'IndustryList', 'IndustryGroup', 'IndustryGroupList', 'GicsSector', 'GicsSectorExt', 'LogLevel',
+           'CSApiActivityLog', 'CSApiActivityLogList', 'CSApiLog', 'CSApiLogList', 'CSLoaderActivityLog',
+           'CSLoaderActivityLogList', 'CSLoaderLog', 'CSLoaderLogList', 'CSQueueActivityLog', 'CSQueueActivityLogList',
+           'CSQueueLog', 'CSQueueLogList', 'CSWebAppActivityLog', 'CSWebAppActivityLogList', 'CSWebAppLog',
+           'CSWebAppLogList']
 
 from ._config import *
 from ._master import *
 from ._company import *
 from ._financial_statements import *
+from ._gics import *
+from ._log import *
 from ._core import IndexName
