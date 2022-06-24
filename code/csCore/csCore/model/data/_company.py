@@ -28,8 +28,10 @@ class Company:
     ticker: str = attrs.field(validator=[attrs.validators.instance_of(str)])
     name: str = attrs.field(validator=[attrs.validators.instance_of(str)])
     description: str = attrs.field(validator=[attrs.validators.instance_of(str)])
-    cik: str = attrs.field(default='0000000000', converter=lambda value: value.zfill(10))
-    figi: str = attrs.field(default='000000000000', converter=lambda value: value.zfill(12))
+    cik: str = attrs.field(default='0000000000', converter=lambda value: value.zfill(10),
+                           validator=[attrs.validators.instance_of(str)])
+    figi: str = attrs.field(default='000000000000', converter=lambda value: value.zfill(12),
+                            validator=[attrs.validators.instance_of(str)])
     exchange: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
     currency: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
     country: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
