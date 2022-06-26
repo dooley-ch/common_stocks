@@ -46,7 +46,7 @@ class TestFigiCode:
 
 class TestCikCode:
     def test_create(self) -> None:
-        record = svc_model.CikCode('789', 'IBM', 'IBM Corp.', 'NYSE')
+        record = svc_model.CikCode('789', 'IBM Corp.', 'IBM', 'NYSE')
         assert record.ticker == 'IBM'
         assert record.name == 'IBM Corp.'
         assert record.cik == '0000000789'
@@ -181,8 +181,8 @@ class TestStatement:
         data = orjson.loads(raw_data)
 
         record = svc_model.Statement.parse(data)
-        assert len(record.annual) == 2
-        assert len(record.quarter) == 2
+        assert len(record.annual) == 1
+        assert len(record.quarter) == 1
 
 
 class TestFinancialStatements:
@@ -216,7 +216,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -234,7 +234,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -254,7 +254,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -272,7 +272,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -292,7 +292,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -310,7 +310,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -330,7 +330,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -348,7 +348,7 @@ class TestFinancialStatements:
                             "value_5":"34"
                         },
                         {
-                            "tag":"Revenue",
+                            "tag":"COS",
                             "value_1":"234",
                             "value_2":"67",
                             "value_3":"57",
@@ -395,17 +395,17 @@ class TestCompany:
     def test_parse(self) -> None:
         raw_data = """
             {
-                "ticker":"IBM",
-                "name":"IBM Corp.",
-                "description":"IBM Company Description",
-                "cik":"345",
-                "exchange":"NYSE",
-                "currency":"USD",
-                "country":"US",
-                "sector":"Technology",
-                "industry":"Software",
-                "address":"1 Main Street",
-                "fiscal_year_end":"May"
+                "Symbol":"IBM",
+                "Name":"IBM Corp.",
+                "Description":"IBM Company Description",
+                "CIK":"345",
+                "Exchange":"NYSE",
+                "Currency":"USD",
+                "Country":"US",
+                "Sector":"Technology",
+                "Industry":"Software",
+                "Address":"1 Main Street",
+                "FiscalYearEnd":"May"
             }
         """
 

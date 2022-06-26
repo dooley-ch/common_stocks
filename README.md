@@ -27,7 +27,7 @@ responsiveness in downloading the company data.
 
 ## System Overview
 
-![System Overview](system_overview.jpg)
+![System Overview](design/system_overview.jpg)
 
 The initial version of the application consists of the following components:
 
@@ -52,7 +52,7 @@ Future versions of the system will be containerized and deployed using Docker.
 
 ## Application Structure
 
-![Application Structure](app_structure.jpg)
+![Application Structure](design/app_structure.jpg)
 
 The application has five main components, four applications and library of common code:
 

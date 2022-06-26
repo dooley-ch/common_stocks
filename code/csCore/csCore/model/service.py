@@ -17,8 +17,8 @@ __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
 __all__ = ['FigiCode', 'FigiCodeList', 'CikCode', 'CikCodeList', 'SpComponent', 'SpComponentList', 'AccountingItem',
-           'AccountingItemList', 'Statement', 'FinancialStatements', 'CompanyOverview', 'EarningsCalendar',
-           'EarningsCalendarList']
+           'AccountingItemList', 'AccountingItemDict', 'Statement', 'FinancialStatements', 'CompanyOverview',
+           'EarningsCalendar', 'EarningsCalendarList']
 
 from datetime import datetime
 from typing import NewType, Any
@@ -50,9 +50,9 @@ FigiCodeList = NewType('FigiCodeList', list[FigiCode])
 
 @attrs.frozen
 class CikCode:
-    cik: str = attrs.field(converter=lambda value: value.zfill(10), validator=[attrs.validators.instance_of(str)])
-    ticker: str = attrs.field(validator=[attrs.validators.instance_of(str)])
+    cik: str = attrs.field(converter=lambda value: str(value).zfill(10), validator=[attrs.validators.instance_of(str)])
     name: str = attrs.field(validator=[attrs.validators.instance_of(str)])
+    ticker: str = attrs.field(validator=[attrs.validators.instance_of(str)])
     exchange: str = attrs.field(validator=[attrs.validators.instance_of(str)])
 
     @classmethod
@@ -78,14 +78,14 @@ class SpComponent:
 SpComponentList = NewType('SpComponentList', list[SpComponent])
 
 
-@attrs.frozen
+@attrs.define
 class AccountingItem:
     tag: str = attrs.field(validator=[attrs.validators.instance_of(str)])
-    value_1: str = attrs.field(validator=[attrs.validators.instance_of(str)])
-    value_2: str = attrs.field(validator=[attrs.validators.instance_of(str)])
-    value_3: str = attrs.field(validator=[attrs.validators.instance_of(str)])
-    value_4: str = attrs.field(validator=[attrs.validators.instance_of(str)])
-    value_5: str = attrs.field(validator=[attrs.validators.instance_of(str)])
+    value_1: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
+    value_2: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
+    value_3: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
+    value_4: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
+    value_5: str = attrs.field(default='', validator=[attrs.validators.instance_of(str)])
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> AccountingItem:
@@ -93,12 +93,13 @@ class AccountingItem:
 
 
 AccountingItemList = NewType('AccountingItemList', list[AccountingItem])
+AccountingItemDict = NewType('AccountingItemDict', dict[str, AccountingItem])
 
 
 @attrs.frozen
 class Statement:
-    annual: AccountingItemList = attrs.Factory(list)
-    quarter: AccountingItemList = attrs.Factory(list)
+    annual: AccountingItemDict = attrs.Factory(dict)
+    quarter: AccountingItemDict = attrs.Factory(dict)
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> Statement:
@@ -108,10 +109,12 @@ class Statement:
         record = Statement()
 
         for item in annual:
-            record.annual.append(AccountingItem.parse(item))
+            acc_item = AccountingItem.parse(item)
+            record.annual[acc_item.tag] = acc_item
 
         for item in quarter:
-            record.quarter.append(AccountingItem.parse(item))
+            acc_item = AccountingItem.parse(item)
+            record.quarter[acc_item.tag] = acc_item
 
         return record
 
@@ -159,7 +162,20 @@ class CompanyOverview:
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> CompanyOverview:
-        return CompanyOverview(**data)
+        ticker = data['Symbol']
+        name = data['Name']
+        description = data['Description']
+        cik = data['CIK']
+        exchange = data['Exchange']
+        currency = data['Currency']
+        country = data['Country']
+        sector = data['Sector']
+        industry = data['Industry']
+        address = data['Address']
+        fiscal_year_end = data['FiscalYearEnd']
+
+        return CompanyOverview(ticker, name, description, cik, exchange, currency, country,
+                               sector, industry, address, fiscal_year_end)
 
 
 @attrs.frozen
