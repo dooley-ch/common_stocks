@@ -29,6 +29,6 @@ from ._master import *
 from ._company import *
 from ._financial_statements import *
 from ._gics import *
-from ._log import *
+from ._log_file import *
 from ._core import IndexName
 from ._earnings import *

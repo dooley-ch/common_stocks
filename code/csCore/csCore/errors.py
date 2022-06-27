@@ -16,7 +16,9 @@ __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
 __all__ = ['ApplicationError', 'ServiceError', 'DatastoreError', 'MessageQueueError', 'MaxLimitExceededError',
-           'RequestFailedError', 'ResponseError', 'ResponseParseError']
+           'RequestFailedError', 'ResponseError', 'ResponseParseError', 'DuplicateKeyError']
+
+from typing import Any
 
 
 class ApplicationError(Exception):
@@ -69,6 +71,23 @@ class DatastoreError(ApplicationError):
     Base class for all datastore errors
     """
     pass
+
+
+class DuplicateKeyError(DatastoreError):
+    """
+    This class is raised when an attepted to insert a duplicate record, is detected.
+    """
+    _record: Any
+    _message: str
+
+    def __init__(self,  record: Any, message: str):
+        self._record = record
+        self._message = message
+
+
+    def __repr__(self) -> object:
+        return f"message: {self._message} - record: {self._record}"
+
 
 
 class MessageQueueError(ApplicationError):
