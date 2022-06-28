@@ -1825,7 +1825,7 @@
 					"comment": "",
 					"defaultvalue": "",
 					"data": "",
-					"list": true,
+					"list": false,
 					"enum": "",
 					"validate": ""
 				}
@@ -1858,20 +1858,6 @@
 					"mongodb": {
 						"options": "{\nname: \"earnings_ix_ticker\",\nunique: true\n}",
 						"fields": "{\n\"ticker\": 1\n}"
-					},
-					"cols": []
-				},
-				{
-					"id": "faa0d934-2752-49d8-b1c5-f6801dd6ffc9",
-					"name": "earnings_ix_search",
-					"unique": false,
-					"fulltext": false,
-					"using": "na",
-					"algorithm": "na",
-					"lockoption": "na",
-					"mongodb": {
-						"options": "{\nname: \"earnings_ix_search\"\n}",
-						"fields": "{\n\"ticker\": 1,\n\"name\": 1,\n\"annual\": 1,\n\"quarter\": 1,\n\"metadata\": 1\n}"
 					},
 					"cols": []
 				}
@@ -1918,7 +1904,7 @@
 		"def_validationAction": "na",
 		"def_collation": "",
 		"def_others": "",
-		"lastSaved": "Wed Jun 22 2022 21:09:24 GMT+0200 (Central European Summer Time)",
+		"lastSaved": "Tue Jun 28 2022 16:30:23 GMT+0200 (Central European Summer Time)",
 		"writeFileParam": false
 	},
 	"otherObjects": {},

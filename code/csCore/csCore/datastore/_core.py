@@ -55,7 +55,8 @@ class CollectionBase(DatastoreBase):
         :return: True if successful otherwise False
         """
         try:
-            results: InsertManyResult = self._collection.insert_one(asdict(record))
+            data = asdict(record)
+            results: InsertManyResult = self._collection.insert_one(data)
         except DuplicateKeyError as e:
             raise DuplicateKeyError(record, str(e))
         else:

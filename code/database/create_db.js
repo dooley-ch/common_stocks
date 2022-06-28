@@ -1152,20 +1152,18 @@ function create_earnings(db) {
 	          }
 	        },
 	        metadata: {
-	          bsonType: 'array',
-	          items: {
-	            title: 'metadata',
-	            required: ['lock_version', 'created_at', 'updated_at'],
-	            properties: {
-	              lock_version: {
-	                bsonType: 'int'
-	              },
-	              created_at: {
-	                bsonType: 'date'
-	              },
-	              updated_at: {
-	                bsonType: 'date'
-	              }
+	          bsonType: 'object',
+	          title: 'metadata',
+	          required: ['lock_version', 'created_at', 'updated_at'],
+	          properties: {
+	            lock_version: {
+	              bsonType: 'int'
+	            },
+	            created_at: {
+	              bsonType: 'date'
+	            },
+	            updated_at: {
+	              bsonType: 'date'
 	            }
 	          }
 	        }
@@ -1179,16 +1177,6 @@ function create_earnings(db) {
 	  name: "earnings_ix_ticker",
 	  unique: true
 	})
-
-	db.earnings.createIndex({
-	  "ticker": 1,
-	  "name": 1,
-	  "annual": 1,
-	  "quarter": 1,
-	  "metadata": 1
-	}, {
-	  name: "earnings_ix_search"
-	});
 }
 
 function drop_database(name) {	
