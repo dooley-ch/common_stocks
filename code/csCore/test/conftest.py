@@ -15,9 +15,20 @@ __license__ = "MIT"
 __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
-__all__ = ['alphavantage_key', 'openfigi_key']
+__all__ = ['alphavantage_key', 'openfigi_key', 'mongodb_connection', 'database_name']
 
 import pytest
+from pymongo import MongoClient
+
+
+@pytest.fixture(scope="session")
+def mongodb_connection() -> str:
+    return 'mongodb://localhost:27017'
+
+
+@pytest.fixture(scope="session")
+def database_name() -> str:
+    return 'common_stocks_test'
 
 
 @pytest.fixture(scope="session")

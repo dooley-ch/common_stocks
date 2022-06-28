@@ -24,7 +24,7 @@ import attrs
 from ._core import Metadata
 
 
-@attrs.frozen
+@attrs.define
 class ConfigItem:
     """
     This class represents a configuration value defined in a configuration record

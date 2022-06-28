@@ -40,6 +40,10 @@ def parse_record_date(value) -> datetime:
 
 @attrs.define
 class Metadata:
-    lock_version: int = attrs.field(default=0, converter=int)
+    lock_version: int = attrs.field(default=1, converter=int)
     created_at: datetime = attrs.field(factory=datetime.now, converter=parse_record_date)
     updated_at: datetime = attrs.field(factory=datetime.now, converter=parse_record_date)
+
+    def update(self) -> None:
+        self.lock_version = self.lock_version + 1
+        self.updated_at = datetime.now()
