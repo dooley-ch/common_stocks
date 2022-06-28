@@ -30,6 +30,17 @@ class ConfigStore(CollectionBase):
     def __init__(self, url: str, database_name: str) -> object:
         super().__init__(url, database_name, 'config')
 
+    def all(self) -> model.ConfigDict | None:
+        raw_data = self._collection.find({}, {'_id': 0})
+        if raw_data:
+            data: model.ConfigDict = dict()
+
+            for item in raw_data:
+                record = model.Config.parse(item)
+                data[record.name] = record
+
+            return data
+
     def get(self, name: str) -> model.ConfigExt | None:
         raw_data = self._collection.find_one({'name': name}, {'_id': 0})
         if raw_data:

@@ -15,9 +15,9 @@ __license__ = "MIT"
 __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
-__all__ = ['ConfigItem', 'Config', 'ConfigList', 'ConfigExt', 'ConfigExtList', 'IndexName', 'Master', 'MasterList',
-           'MasterExt', 'MasterExtList', 'Company', 'CompanyList', 'CompanyExt', 'CompanyExtList', 'AccountsEntry',
-           'FinancialStatements', 'FinancialStatementsExt', 'SubIndustry', 'SubIndustryList', 'Industry',
+__all__ = ['ConfigItem', 'Config', 'ConfigList', 'ConfigDict', 'ConfigExt', 'ConfigExtList', 'IndexName', 'Master',
+           'MasterList', 'MasterExt', 'MasterExtList', 'Company', 'CompanyList', 'CompanyExt', 'CompanyExtList',
+           'AccountsEntry', 'FinancialStatements', 'FinancialStatementsExt', 'SubIndustry', 'SubIndustryList', 'Industry',
            'IndustryList', 'IndustryGroup', 'IndustryGroupList', 'GicsSector', 'GicsSectorExt', 'LogLevel',
            'CSApiActivityLog', 'CSApiActivityLogList', 'CSApiLog', 'CSApiLogList', 'CSLoaderActivityLog',
            'CSLoaderActivityLogList', 'CSLoaderLog', 'CSLoaderLogList', 'CSQueueActivityLog', 'CSQueueActivityLogList',

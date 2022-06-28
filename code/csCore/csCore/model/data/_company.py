@@ -40,16 +40,16 @@ class Company:
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> Company:
-        ticker = data['']
-        name = data['']
-        description = data['']
-        cik = data['']
-        figi = data['']
-        exchange = data['']
-        currency = data['']
-        country = data['']
-        sub_industry = data['']
-        indexes = data['']
+        ticker = data['ticker']
+        name = data['name']
+        description = data['description']
+        cik = data['cik']
+        figi = data['figi']
+        exchange = data['exchange']
+        currency = data['currency']
+        country = data['country']
+        sub_industry = data['sub_industry']
+        indexes = data['indexes']
 
         record = Company(ticker, name, description, cik, figi, exchange, currency, country, sub_industry)
 
@@ -59,7 +59,7 @@ class Company:
         return record
 
 
-CompanyList = NewType('MasterExtList', list[Company])
+CompanyList = NewType('CompanyList', list[Company])
 
 
 @attrs.frozen
@@ -68,20 +68,20 @@ class CompanyExt(Company):
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> CompanyExt:
-        ticker = data['']
-        name = data['']
-        description = data['']
-        cik = data['']
-        figi = data['']
-        exchange = data['']
-        currency = data['']
-        country = data['']
-        sub_industry = data['']
-        indexes = data['']
+        ticker = data['ticker']
+        name = data['name']
+        description = data['description']
+        cik = data['cik']
+        figi = data['figi']
+        exchange = data['exchange']
+        currency = data['currency']
+        country = data['country']
+        sub_industry = data['sub_industry']
+        indexes = data['indexes']
         metadata = data['metadata']
 
-        record = Company(ticker, name, description, cik, figi, exchange, currency, country, sub_industry,
-                         Metadata(**metadata))
+        record = CompanyExt(ticker, name, description, cik, figi, exchange, currency, country, sub_industry,
+                         metadata=Metadata(**metadata))
 
         for index in indexes:
             record.indexes.append(IndexName(index))

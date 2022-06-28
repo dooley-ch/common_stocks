@@ -67,7 +67,7 @@ class TestConfig:
         cfg = db_model.ConfigExt('database')
         assert cfg.name == 'database'
         assert len(cfg.items) == 0
-        assert cfg.metadata.lock_version == 0
+        assert cfg.metadata.lock_version == 1
 
     def test_parse_config(self) -> None:
         data = orjson.loads(_config_data_1)

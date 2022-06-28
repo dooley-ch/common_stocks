@@ -184,7 +184,7 @@ class TestGicsSector:
         assert sector.id == 60
         assert sector.name == 'Real Estate'
         assert len(sector.industry_group) == 1
-        assert sector.metadata.lock_version == 0
+        assert sector.metadata.lock_version == 1
 
     def test_parse_config(self) -> None:
         data = orjson.loads(_gics_data_1)

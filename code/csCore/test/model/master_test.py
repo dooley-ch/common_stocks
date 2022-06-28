@@ -83,7 +83,7 @@ class TestMaster:
         assert record.figi == '000000345678'
         assert record.sub_industry == 'Technology'
         assert len(record.indexes) == 2
-        assert record.metadata.lock_version == 0
+        assert record.metadata.lock_version == 1
 
     def test_parse(self) -> None:
         data = orjson.loads(_master_data_1)

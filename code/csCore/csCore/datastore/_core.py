@@ -61,7 +61,7 @@ class CollectionBase(DatastoreBase):
         else:
             return results.acknowledged
 
-    def clean(self) -> None:
+    def clear(self) -> None:
         """
         This method deletes all the records in the database
         """

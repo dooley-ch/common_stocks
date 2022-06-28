@@ -169,7 +169,7 @@ class TestFinancialStatements:
         assert len(record.cash_flow_statement_quarter) == 2
         assert len(record.earnings_statement_annual) == 1
         assert len(record.earnings_statement_quarter) == 1
-        assert record.metadata.lock_version == 0
+        assert record.metadata.lock_version == 1
 
     def test_parse(self) -> None:
         data = orjson.loads(_financial_statements_data_1)

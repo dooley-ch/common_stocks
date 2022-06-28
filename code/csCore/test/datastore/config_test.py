@@ -24,7 +24,7 @@ import csCore.model.data as model
 class TestConfig:
     def test_insert(self, mongodb_connection, database_name) -> None:
         store = ds.ConfigStore(mongodb_connection, database_name)
-        store.clean()
+        store.clear()
 
         item = model.ConfigItem('user', 'Tom234')
         cfg = model.ConfigExt('database')
@@ -34,7 +34,7 @@ class TestConfig:
 
     def test_update(self, mongodb_connection, database_name) -> None:
         store = ds.ConfigStore(mongodb_connection, database_name)
-        store.clean()
+        store.clear()
 
         item = model.ConfigItem('user', 'Tom234')
         cfg = model.ConfigExt('database')
@@ -54,7 +54,7 @@ class TestConfig:
 
     def test_get(self, mongodb_connection, database_name) -> None:
         store = ds.ConfigStore(mongodb_connection, database_name)
-        store.clean()
+        store.clear()
 
         item = model.ConfigItem('user', 'Tom234')
         cfg = model.ConfigExt('database')
@@ -70,9 +70,27 @@ class TestConfig:
         assert item.key == 'user'
         assert item.value == 'Tom234'
 
+    def test_all(self, mongodb_connection, database_name) -> None:
+        store = ds.ConfigStore(mongodb_connection, database_name)
+        store.clear()
+
+        item = model.ConfigItem('user', 'Tom234')
+        cfg = model.ConfigExt('database')
+        cfg.items.append(item)
+        assert store.insert(cfg)
+
+        cfg = model.ConfigExt('webservice')
+        cfg.items.append(item)
+        assert store.insert(cfg)
+
+        records = store.all()
+        assert len(records) == 2
+        assert 'database' in records
+        assert 'webservice' in records
+
     def test_clear(self, mongodb_connection, database_name) -> None:
         store = ds.ConfigStore(mongodb_connection, database_name)
-        store.clean()
+        store.clear()
 
         item = model.ConfigItem('user', 'Tom234')
         cfg = model.ConfigExt('database')
@@ -83,6 +101,6 @@ class TestConfig:
         record = store.get('database')
         assert record
 
-        store.clean()
+        store.clear()
         record = store.get('database')
         assert record is None
