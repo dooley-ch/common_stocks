@@ -28,8 +28,10 @@ class MasterStore(CollectionBase):
     def __init__(self, url: str, database_name: str) -> object:
         super().__init__(url, database_name, 'master')
 
-    def get(self, ticker: str) -> model.Master:
-        pass
+    def get(self, ticker: str) -> model.MasterExt | None:
+        raw_data = self._collection.find_one({'ticker': ticker}, {'_id': 0})
+        if raw_data:
+            return model.MasterExt.parse(raw_data)
 
     def insert(self, record: model.MasterExt) -> bool:
         return self._insert(record)
