@@ -28,8 +28,10 @@ class GicsSectorStore(CollectionBase):
     def __init__(self, url: str, database_name: str) -> object:
         super().__init__(url, database_name, 'gics_sector')
 
-    def get(self, sector: str) -> model.GicsSector:
-        pass
+    def get(self, name: str) -> model.GicsSectorExt:
+        raw_data = self._collection.find_one({'name': name}, {'_id': 0})
+        if raw_data:
+            return model.GicsSectorExt.parse(raw_data)
 
     def insert(self, record: model.GicsSectorExt) -> bool:
         return self._insert(record)
