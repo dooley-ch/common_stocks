@@ -29,7 +29,9 @@ class FinancialStatementsStore(CollectionBase):
         super().__init__(url, database_name, 'financial_statements')
 
     def get(self, ticker: str) -> model.FinancialStatements:
-        pass
+        raw_data = self._collection.find_one({'ticker': ticker}, {'_id': 0})
+        if raw_data:
+            return model.FinancialStatementsExt.parse(raw_data)
 
     def insert(self, record: model.FinancialStatementsExt) -> bool:
         return self._insert(record)

@@ -29,7 +29,7 @@ class CompanyStore(CollectionBase):
         super().__init__(url, database_name, 'company')
 
     def get(self, ticker: str) -> model.CompanyExt:
-        raw_data = self._collection.find_one({'ticker': ticker})
+        raw_data = self._collection.find_one({'ticker': ticker}, {'_id': 0})
         if raw_data:
             return model.CompanyExt.parse(raw_data)
 

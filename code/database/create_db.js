@@ -381,235 +381,217 @@ function create_financial_statements(db) {
 	          bsonType: 'string'
 	        },
 	        income_statement_annual: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
 	        },
 	        income_statement_quarter: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
 	        },
 	        cash_flow_statement_annual: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
 	        },
 	        cash_flow_statement_quarter: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
 	        },
 	        balance_sheet_statement_annual: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
 	        },
 	        balance_sheet_statement_quarter: {
-	          bsonType: 'string'
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
+	              }
+	            }
+	          }
 	        },
 	        earnings_statement_annual: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
 	        },
 	        earnings_statement_quarter: {
-	          bsonType: 'object',
-	          title: 'statement',
-	          properties: {
-	            items: {
-	              bsonType: 'array',
-	              items: {
-	                title: 'accounts_entry',
-	                required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
-	                properties: {
-	                  tag: {
-	                    bsonType: 'string'
-	                  },
-	                  value_1: {
-	                    bsonType: 'string'
-	                  },
-	                  value_2: {
-	                    bsonType: 'string'
-	                  },
-	                  value_3: {
-	                    bsonType: 'string'
-	                  },
-	                  value_4: {
-	                    bsonType: 'string'
-	                  },
-	                  value_5: {
-	                    bsonType: 'string'
-	                  }
-	                }
+	          bsonType: 'array',
+	          items: {
+	            title: 'accounts_entry',
+	            required: ['tag', 'value_1', 'value_2', 'value_3', 'value_4', 'value_5'],
+	            properties: {
+	              tag: {
+	                bsonType: 'string'
+	              },
+	              value_1: {
+	                bsonType: 'string'
+	              },
+	              value_2: {
+	                bsonType: 'string'
+	              },
+	              value_3: {
+	                bsonType: 'string'
+	              },
+	              value_4: {
+	                bsonType: 'string'
+	              },
+	              value_5: {
+	                bsonType: 'string'
 	              }
 	            }
 	          }
