@@ -32,8 +32,12 @@ cover the following:
 
 The application uses the following external libraries:
 
-| Library                                    | Comments                                    |
-|--------------------------------------------|---------------------------------------------|
-| [attrs](https://www.attrs.org/en/stable/)  | Used to build DTO classes                   |
-| [pendulum](https://pendulum.eustace.io/)   | Date and time support library               |
-| [orjson](https://github.com/ijl/orjson)    | Faster replacement for the standard library |
+| Library                                                    | Comments                                    |
+|------------------------------------------------------------|---------------------------------------------|
+| [attrs](https://www.attrs.org/en/stable/)                  | Used to build DTO classes                   |
+| [beautifulsoup4](https://pypi.org/project/beautifulsoup4/) | Used to scrape data from a web page         |
+| [dnspython](https://www.dnspython.org/)                    | Needed by the pymongo library               |
+| [pendulum](https://pendulum.eustace.io/)                   | Date and time support library               |
+| [orjson](https://github.com/ijl/orjson)                    | Faster replacement for the standard library |
+| [pymongo](https://pymongo.readthedocs.io/en/stable/)       | Used to access the application's database   |
+| [requests](https://pypi.org/project/requests/)             | Used to download data from the internet     |
