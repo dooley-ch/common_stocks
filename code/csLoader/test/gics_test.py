@@ -1,12 +1,12 @@
 # *******************************************************************************************
-#  File:  __init__.py
+#  File:  gics_test.py
 #
-#  Created: 20-06-2022
+#  Created: 01-07-2022
 #
 #  Copyright (c) 2022 James Dooley <james@dooley.ch>
 #
 #  History:
-#  20-06-2022: Initial version
+#  01-07-2022: Initial version
 #
 # *******************************************************************************************
 
@@ -15,3 +15,10 @@ __license__ = "MIT"
 __version__ = "1.0.0"
 __maintainer__ = "James Dooley"
 __status__ = "Production"
+
+import csLoader.src.gics as gics
+
+
+def test_load_gics() -> None:
+    data = gics.load_gics()
+    assert len(data) == 11
