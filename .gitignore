@@ -132,3 +132,4 @@ dmypy.json
 .idea
 design/.idea
 .DS_Store
+*.log
