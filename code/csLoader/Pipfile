@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-cscore = {editable = true, file = "file:///Volumes/LaCie/Dev/common_stocks/code/csCore"}
+cscore = {editable = true, file = "/Users/jdooley/Development/common_stocks/code/csCore"}
 attrs = "*"
 pendulum = "*"
 orjson = "*"

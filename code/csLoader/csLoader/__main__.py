@@ -88,7 +88,11 @@ def load_earnings(ctx: click.Context, run_local: bool = False) -> None:
 
 
 def exit_routine() -> None:
-    utils.log_end()
+    try:
+        utils.log_end()
+    except:
+        # We swallow any errors on exit
+        pass
 
 
 def main() -> None:
